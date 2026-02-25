@@ -37,7 +37,7 @@ button {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 95px 50px;
+  padding: 92px 50px;
 }
 
 .address {
@@ -64,7 +64,7 @@ button {
 }
 
 .about {
-  padding-top: 120px;
+  padding-top: 117px;
 }
 
 .footer {
@@ -75,5 +75,5 @@ button {
   align-items: start;
   gap: 8px;
   min-height: 180px;
-  padding-top: 180px;
+  padding-top: 151px;
 }
