@@ -33,6 +33,7 @@
 }
 
 .cover__title {
+  position: relative;
   padding-top: 165px;
   padding-right: 50px;
   padding-bottom: 106px;
@@ -43,33 +44,31 @@
   font-size: 100px;
   font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 0.3em;
+  line-height: 1.35;
 }
 
 .aligned-text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 95%;
-  line-height: 1.15;
+  display: block;
 }
 
 .cover__title-left {
-  justify-content: flex-start;
-  align-items: flex-start;
+  text-align: left;
+  top: 165px;
 }
 
 .cover__title-center {
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  top: 300px;
 }
 
 .cover__title-right {
-  justify-content: flex-end;
-  align-items: flex-end;
+  text-align: right;
+  top: 435px;
 }
 
 .letter-spacing-extended {
-  letter-spacing: 30px;
+  letter-spacing: 0.3em;
 }
 
 .cover__description {
@@ -104,7 +103,7 @@
 
 .lots__heading {
   padding-bottom: 24px;
-  padding-left: 64px;
+  padding-left: 40px;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -174,7 +173,7 @@
   display: flex;
   flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
   height: 100%;
 }
 
@@ -190,7 +189,7 @@
 }
 
 .lots__look-more-link {
-  padding-left: 54px;
+  padding-left: 40px;
   color: black;
   font-size: 20px;
   text-transform: lowercase;
@@ -200,7 +199,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  justify-items: center;
+  justify-items: start;
   gap: 25px;
 }
 
@@ -224,7 +223,7 @@
 }
 
 .about__title {
-  padding-top: 136px;
+  padding-top: 0;
   padding-bottom: 100px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
