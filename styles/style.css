@@ -1,5 +1,12 @@
 /* Header */
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 50px;
+}
+
 .header__links-list {
   display: flex;
   gap: 32px;
@@ -23,18 +30,35 @@
   list-style: none;
 }
 
-.address a {
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-wrap: break-word;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24.3px;
+}
+
+.address__text {
   color: black;
 }
 
 .header__address {
   justify-self: end; /* Адрес прижат к правому краю */
   width: 240px;
-  font-size: 18px;
-  line-height: 24.3px;
 }
 
 /* Cover */
+
+.cover {
+  position: relative;
+  min-height: 757px;
+  background: url(../images/lotus-flower.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .cover__title {
   position: relative;
@@ -49,6 +73,27 @@
   line-height: 1.15;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+}
+
+/* Затемнение для заднего фона */
+.background__opacity {
+  position: relative;
+}
+
+.background__opacity::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Затемнение на 60% */
+  z-index: 1;
+}
+
+.background__opacity > * {
+  position: relative;
+  z-index: 2; /* Контент поверх затемнения */
 }
 
 .aligned-text {
@@ -118,6 +163,10 @@
 
 /* Lots */
 
+.lots {
+  padding-top: 180px;
+}
+
 .lots__heading {
   padding-bottom: 24px;
   padding-left: 64px;
@@ -160,30 +209,15 @@
    ----------------------------------------------- */
 
 .card_type_film {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/lots-images/lots-film.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/lots-images/lots-film.png);
 }
 
 .card_type_book {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-    url(../images/lots-images/lots-book.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/lots-images/lots-book.jpg);
 }
 
 .card_type_picture {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-    url(../images/lots-images/lots-picture.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/lots-images/lots-picture.jpg);
 }
 
 .card__title {
@@ -204,6 +238,9 @@
 	justify-content: space-between; /* Толкает заголовок вверх, а текст — вниз карточки */
 	align-items: flex-start;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__text {
@@ -229,6 +266,10 @@
 }
 
 /* About */
+
+.about {
+  padding-top: 117px;
+}
 
 /* Двухколоночный grid: фиксированная колонка для логотипа + гибкая для текста */
 .about__column {
@@ -281,24 +322,23 @@
   line-height: 1.2;
 }
 
-.about__text-second-paragraph {
-  width: 690px;
-  padding-bottom: 30px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-
-}
-
 /* Footer */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  align-items: start;
+  gap: 8px;
+  padding-top: 151px;
+  padding-bottom: 82px;
+}
 
 .footer__address {
   justify-self: start; /* Выравнивает адрес по левому краю */
   width: 300px;
   padding-left: 51px;
-  font-size: 18px;
-  line-height: 24.3px;
 }
 
 .footer__menu-list {
@@ -306,14 +346,10 @@
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.2;
   text-align: center;
   text-transform: lowercase;
   list-style: none;
-}
-
-.footer__menu-list-item {
-  margin-bottom: -5px; /* Подтягивает пункты ближе друг к другу */
 }
 
 .footer__social-list {

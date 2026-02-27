@@ -33,47 +33,11 @@ button {
   font: inherit;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  align-items: center;
-  padding: 92px 50px;
-}
 
-.address {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow-wrap: break-word;
-  font-style: normal;
-}
 
-.cover {
-  position: relative;
-  min-height: 757px;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url(../images/lotus-flower.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
-.lots {
-  padding-top: 180px;
-}
 
-.about {
-  padding-top: 117px;
-}
 
-.footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  justify-items: center;
-  align-items: start;
-  gap: 8px;
-  min-height: 180px;
-  padding-top: 151px;
-}
+
+
+
