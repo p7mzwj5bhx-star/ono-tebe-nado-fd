@@ -1,9 +1,11 @@
+/* Header */
+
 .header__links-list {
   display: flex;
   gap: 32px;
   font-size: 18px;
   text-transform: lowercase;
-  list-style: circle;
+  list-style: circle; /* circle — маркеры-кружки (для первого пункта скрываются отдельным классом)*/
 }
 
 .header__link {
@@ -11,10 +13,12 @@
   text-decoration: underline;
 }
 
+/* Активная ссылка отличается только отсутствием подчёркивания */
 .header__link_active {
   text-decoration: none;
 }
 
+/* Убирает маркер у первого пункта списка */
 .header__links-list-item_no-bullit {
   list-style: none;
 }
@@ -24,11 +28,13 @@
 }
 
 .header__address {
-  justify-self: end;
+  justify-self: end; /* Адрес прижат к правому краю */
   width: 240px;
   font-size: 18px;
   line-height: 24.3px;
 }
+
+/* Cover */
 
 .cover__title {
   position: relative;
@@ -55,6 +61,8 @@
   margin-bottom: 0;
 }
 
+/* Три варианта выравнивания строк заголовка */
+
 .cover__title-left {
   padding-left: 50px;
   text-align: left;
@@ -62,7 +70,7 @@
 
 .cover__title-center {
   text-align: center;
-  text-indent: 0.3em;
+  text-indent: 0.3em; /* Компенсирует визуальный сдвиг от letter-spacing, чтобы текст выглядел по-настоящему центрированным */
 }
 
 .cover__title-right {
@@ -70,9 +78,10 @@
   text-align: right;
 }
 
+/* Подпись под заголовком */
 .cover__description {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* разводит текст и кнопку по краям */
   align-items: center;
   padding: 8px 50px 50px 50px;
 }
@@ -88,8 +97,11 @@
   font-optical-sizing: auto;
 }
 
+/* Кнопка «Сделать ставку»:
+   background: transparent + border: white — «призрачная» кнопка поверх фото */
+
 .bet-button {
-  flex-shrink: 0;
+  flex-shrink: 0; /* Не сжимается при нехватке места; */
   width: 256px;
   height: 51px;
   border: 1px solid white;
@@ -101,8 +113,10 @@
   font-style: normal;
   text-transform: uppercase;
   background: transparent;
-  appearance: none;;
+  appearance: none; /* Сбрасывает браузерные стили кнопки */
 }
+
+/* Lots */
 
 .lots__heading {
   padding-bottom: 24px;
@@ -112,23 +126,26 @@
   text-transform: uppercase;
 }
 
+/* CSS Grid: 3 равные колонки */
 .lots__card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   justify-items: center;
-  gap: 10px;
+  gap: 10px;   /* Зазор между карточками  */
   margin-top: 2px;
   padding-right: 15px;
   padding-left: 15px;
   list-style: none;
 }
 
+/* Фиксированная ширина карточки при резиновой сетке */
 .lots__card-list-item {
   width: 334px;
-  min-height: 596px;
+  min-height: 596px; /* Гарантирует минимальную высоту даже при малом содержимом */
 }
 
+/* Ссылка растягивается на всю высоту карточки через flex-column + height: 100% */
 .card-link {
   display: flex;
   flex-direction: column;
@@ -136,6 +153,11 @@
   color: white;
   text-decoration: none;
 }
+
+/* -----------------------------------------------
+   Фоны карточек: полупрозрачный чёрный градиент
+   поверх изображения улучшает читаемость текста
+   ----------------------------------------------- */
 
 .card_type_film {
   background: 
@@ -179,7 +201,7 @@
 .card {
   display: flex;
   flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-between; /* Толкает заголовок вверх, а текст — вниз карточки */
 	align-items: flex-start;
   height: 100%;
 }
@@ -206,6 +228,9 @@
   text-transform: lowercase;
 }
 
+/* About */
+
+/* Двухколоночный grid: фиксированная колонка для логотипа + гибкая для текста */
 .about__column {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -215,6 +240,7 @@
   padding-left: 70px;
 }
 
+/* Круглый блок-логотип */
 .about__logo {
   display: flex;
   justify-content: center;
@@ -222,7 +248,7 @@
   width: 240px;
   height: 240px;
   margin-top: 35px;
-  border-radius: 50%;
+  border-radius: 50%; /* Даёт идеальный круг */
   background-color: black;
 }
 
@@ -265,8 +291,10 @@
 
 }
 
+/* Footer */
+
 .footer__address {
-  justify-self: start;
+  justify-self: start; /* Выравнивает адрес по левому краю */
   width: 300px;
   padding-left: 51px;
   font-size: 18px;
@@ -285,7 +313,7 @@
 }
 
 .footer__menu-list-item {
-  margin-bottom: -5px;
+  margin-bottom: -5px; /* Подтягивает пункты ближе друг к другу */
 }
 
 .footer__social-list {
@@ -301,6 +329,7 @@
   color: black;
 }
 
+/* Активный пункт меню футера без подчёркивания — аналогично header__link_active */
 .footer__menu-link_active {
   text-decoration: none;
 }
